@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    *Süre göstergesi
+    *pause düğmesi
+    *takım adı
+    *skor bilgisi
+    *kelime kartı
+    *doğru butonu
+    *pas butonu
+    *tabu butonu
+    *pas sayısı
+    ->Lİnear Layout da ;genişlik,yükseklik ve oriantion vermek kesin lazım
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlayScreen"
+    android:orientation="vertical"
+    android:background="@drawable/be5c0e4094052d751c7eafc5d1a06f07"
+    >
+
+    <TextView
+        android:id="@+id/textSure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Süre : 0 "
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textTakimAdi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Takım Adı : "
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:gravity="center"
+
+
+            />
+
+    <ImageView
+        android:id="@+id/ImageDurdur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/pause_presentation_f_ll0_wght400_grad0_opsz24"
+        android:layout_weight="1"
+        android:foregroundGravity="center"
+        />
+        </LinearLayout>
+
+<TextView
+    android:id="@+id/textSkor"
+    android:layout_width="match_parent"
+    android:layout_height="26dp"
+    android:text="Skor : 23"
+    android:textSize="20sp"
+    android:gravity="center"
+    />
+
+    <RelativeLayout
+        android:layout_width="260dp"
+        android:layout_height="360dp"
+       android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/secondPageBG"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:layout_margin="5dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/f1d0d396dfedfab6f848cbafdef3b56e">
+
+            <TextView
+                android:id="@+id/textAnaKelime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="ANA KELİME"
+                android:textSize="26sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="4dp"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="6dp"
+                android:background="@color/purple_200" />
+
+            <TextView
+                android:id="@+id/textKelime1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="TABU KELİMESİ 1"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textKelime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="TABU KELİMESİ 2"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textKelime3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="TABU KELİMESİ 3"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textKelime4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="TABU KELİMESİ 4"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textKelime5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="TABU KELİMESİ 5"
+                android:textColor="@color/orange"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/ImagePas"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:src="@drawable/exit_to_app_f_ll0_wght400_grad0_opsz24"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/ImageTabu"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:src="@drawable/disabled_by_default_f_ll0_wght400_grad0_opsz24"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/ImageDogru"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:src="@drawable/check_box_f_ll0_wght400_grad0_opsz24"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textKalanPas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kalan Pas Sayısı : 3"
+        android:textSize="18sp"
+        android:gravity="center"/>
+
+
+
+
+</LinearLayout>

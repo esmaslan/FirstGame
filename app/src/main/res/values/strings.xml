@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CountDownTimer</string>
+    <string name="secrettaboo">SECRET TABOO</string>
+    <string name="startButton">Start to Play</string>
+    <string name="team1">TEAM 1</string>
+    <string name="team2">TEAM 2</string>
+    <string name="start">START</string>
+</resources>
