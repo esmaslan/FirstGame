@@ -48,6 +48,8 @@ public class PlayScreen extends AppCompatActivity {
     List<WordsObject> wordsList=new ArrayList<>();
     SQLiteDatabase db;
 
+    String takim= "0";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +58,34 @@ public class PlayScreen extends AppCompatActivity {
         DatabaseHelper databaseHelper=new DatabaseHelper(this);
         db =databaseHelper.getWritableDatabase();
 
+        //singleton veri alma
+
+        if (DataSingleton.getInstance().getTakim()!= null){
+            takim=DataSingleton.getInstance().getTakim();
+        }
+        else {
+            takim="1";
+        }
+
+
+
         WordsObject word1=new WordsObject("İZMİR","Gevrek");
+        WordsObject word2=new WordsObject("MANİSA","Şehzade");
+        WordsObject word3=new WordsObject("KONYA","Mevlana");
+        WordsObject word4=new WordsObject("İSTANBUL","Kız Kulesi");
+        WordsObject word5=new WordsObject("SAMSUN","Pide");
+        WordsObject word6=new WordsObject("AFYON","BÜKME");
+        WordsObject word7=new WordsObject("ISPARTA","GÜL");
+        WordsObject word8=new WordsObject("ERZURUM","Cağ Kebabı");
+
+        wordsList.add(word1);
+        wordsList.add(word2);
+        wordsList.add(word3);
+        wordsList.add(word4);
+        wordsList.add(word5);
+        wordsList.add(word6);
+        wordsList.add(word7);
+        wordsList.add(word8);
 
        /* long insertID= addWords(word1);
         if (insertID!=-1){
@@ -121,9 +150,24 @@ public class PlayScreen extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-              // onBackPressed();//onceki ekrana doner
 
+                //Singleton a veri alma
+
+                if (takim.equals("1")){
+                    DataSingleton.getInstance().setTakim("2");
+                    int skor1Pre=DataSingleton.getInstance().getSkor1();
+                    DataSingleton.getInstance().setSkor1(skor+skor1Pre);
+                }
+                else
+                {
+                    DataSingleton.getInstance().setTakim("1");
+                    int skor2Pre=DataSingleton.getInstance().getSkor2();
+                    DataSingleton.getInstance().setSkor2(skor+skor2Pre);
+                }
+
+              // onBackPressed();//onceki ekrana doner
                 Intent intent=new Intent(PlayScreen.this,ChoosingScreen.class);
+                startActivity(intent);
             }
         }.start();
 

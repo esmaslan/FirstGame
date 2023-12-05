@@ -9,44 +9,93 @@
     android:orientation="vertical"
     android:background="@color/secondPageBG">
 
-    <ImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="80dp"
-        android:src="@drawable/unnamed"
-        android:gravity="center"/>
-    
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:text="@string/team1"
-        android:textSize="36sp"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:text="@string/team2"
-        android:textSize="36sp"
-        />
-    
-    <Button
-        android:id="@+id/ButonStart"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginEnd="60dp"
-        android:text="@string/start"
-        android:textSize="26sp"
-        android:textColor="@color/black"
-        android:backgroundTint="@color/purple_200"
-        />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="80dp"
+                android:gravity="center"
+                android:src="@drawable/unnamed" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="@string/team1"
+                android:textSize="36sp"
+                android:backgroundTint="@color/material_dynamic_neutral_variant10"/>
+
+            <TextView
+                android:id="@+id/textTakim1Skor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+
+
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/team2"
+                android:textSize="36sp"
+                android:backgroundTint="@color/orange"/>
+
+            <TextView
+                android:id="@+id/textTakim2Skor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/orange"
+                android:textSize="24sp"
+
+
+                />
+
+            <Button
+                android:id="@+id/ButonStart"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="60dp"
+                android:backgroundTint="@color/purple_200"
+                android:text="@string/start"
+                android:textColor="@color/black"
+                android:textSize="26sp" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 </LinearLayout>
