@@ -5,4 +5,11 @@
     <string name="team1">TEAM 1</string>
     <string name="team2">TEAM 2</string>
     <string name="start">START</string>
+    <string name="takımAdıText">Takım Adı : </string>
+    <string name="finishText">OYUN BİTTİ!!!</string>
+    <string name="alertText">TAMAM</string>
+    <string name="tebrikTex">TEBRİKLER!!!</string>
+    <string name="tekrarOynaText">TEKRAR OYNA</string>
+    <string name="kazananTeam1">TEAM 1 KAZANDI!!!</string>
+    <string name="kazananTeam2">TEAM 2 KAZANDI!!!</string>
 </resources>

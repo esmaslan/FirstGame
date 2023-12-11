@@ -11,4 +11,6 @@
     <color name="secondPageBG">#F0B2F0</color>
     <color name="cartColor">#C0B2B2</color>
     <color name="orange">#F58216</color>
+    <color name="purple">#AF69CD</color>
+    <color name="darkBrown">#614C37</color>
 </resources>

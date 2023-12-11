@@ -1,5 +1,6 @@
 package com.example.FirstGame;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
@@ -8,7 +9,9 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,11 +65,12 @@ public class PlayScreen extends AppCompatActivity {
 
         if (DataSingleton.getInstance().getTakim()!= null){
             takim=DataSingleton.getInstance().getTakim();
+           // textTakimAdi.setText(textTakimAdi.getText());
         }
         else {
             takim="1";
+            //textTakimAdi.setText(textTakimAdi.getText()+ "Takım 1");
         }
-
 
 
         WordsObject word1=new WordsObject("İZMİR","Gevrek");
