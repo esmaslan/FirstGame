@@ -51,7 +51,9 @@ public class PlayScreen extends AppCompatActivity {
     List<WordsObject> wordsList=new ArrayList<>();
     SQLiteDatabase db;
 
-    String takim= "0";
+    String takim= "";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,17 +63,44 @@ public class PlayScreen extends AppCompatActivity {
         DatabaseHelper databaseHelper=new DatabaseHelper(this);
         db =databaseHelper.getWritableDatabase();
 
+        // activitye bağlama
+        textSure=findViewById(R.id.textSure);
+        textTakimAdi=findViewById(R.id.textTakimAdi);
+        imageDurdur=findViewById(R.id.ImageDurdur);
+        textSkor=findViewById(R.id.textSkor);
+        textAnaKelime=findViewById(R.id.textAnaKelime);
+        textKelime1=findViewById(R.id.textKelime1);
+        textKelime2=findViewById(R.id.textKelime2);
+        textKelime3=findViewById(R.id.textKelime3);
+        textKelime4=findViewById(R.id.textKelime4);
+        textKelime5=findViewById(R.id.textKelime5);
+        imagePas=findViewById(R.id.ImagePas);
+        imageTabu=findViewById(R.id.ImageTabu);
+        imageDogru=findViewById(R.id.ImageDogru);
+        textKalanPas=findViewById(R.id.textKalanPas);
+
+
         //singleton veri alma
 
-        if (DataSingleton.getInstance().getTakim()!= null){
+       /* if (DataSingleton.getInstance().getTakim().equals("1") ){
             takim=DataSingleton.getInstance().getTakim();
-           // textTakimAdi.setText(textTakimAdi.getText());
+            textTakimAdi.setText( textTakimAdi.getText()+"TAKIM 2");
+
         }
         else {
             takim="1";
-            //textTakimAdi.setText(textTakimAdi.getText()+ "Takım 1");
-        }
+            textTakimAdi.setText( textTakimAdi.getText()+"TAKIM 1");
+        }*/
 
+        if (DataSingleton.getInstance().getTakim()==null){
+            takim="1";
+            textTakimAdi.setText( textTakimAdi.getText()+"TAKIM 1");
+
+        }
+        else {
+            takim=DataSingleton.getInstance().getTakim();
+            textTakimAdi.setText( textTakimAdi.getText()+"TAKIM 2");
+        }
 
         WordsObject word1=new WordsObject("İZMİR","Gevrek");
         WordsObject word2=new WordsObject("MANİSA","Şehzade");
@@ -122,21 +151,7 @@ public class PlayScreen extends AppCompatActivity {
         System.out.println("Liste Dolu!");
 
 
-        // activitye bağlama
-        textSure=findViewById(R.id.textSure);
-        textTakimAdi=findViewById(R.id.textTakimAdi);
-        imageDurdur=findViewById(R.id.ImageDurdur);
-        textSkor=findViewById(R.id.textSkor);
-        textAnaKelime=findViewById(R.id.textAnaKelime);
-        textKelime1=findViewById(R.id.textKelime1);
-        textKelime2=findViewById(R.id.textKelime2);
-        textKelime3=findViewById(R.id.textKelime3);
-        textKelime4=findViewById(R.id.textKelime4);
-        textKelime5=findViewById(R.id.textKelime5);
-        imagePas=findViewById(R.id.ImagePas);
-        imageTabu=findViewById(R.id.ImageTabu);
-        imageDogru=findViewById(R.id.ImageDogru);
-        textKalanPas=findViewById(R.id.textKalanPas);
+
 
         textSkor.setText(String.valueOf(skor));
         textKalanPas.setText("Kalan Pas Sayısı : "+String.valueOf(kalanPas));
@@ -168,6 +183,7 @@ public class PlayScreen extends AppCompatActivity {
                     int skor2Pre=DataSingleton.getInstance().getSkor2();
                     DataSingleton.getInstance().setSkor2(skor+skor2Pre);
                 }
+
 
               // onBackPressed();//onceki ekrana doner
                 Intent intent=new Intent(PlayScreen.this,ChoosingScreen.class);

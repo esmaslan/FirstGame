@@ -50,6 +50,6 @@ public class ExcelReader {
 
     public static void main(String[] args) {
         ExcelReader reader = new ExcelReader();
-        reader.readExcelFile("res/values/farklı 100 kelime daha yap lütfen.xlsx");
+        reader.readExcelFile("java/com/example/FirstGame/words.xlsx");
     }
 }
